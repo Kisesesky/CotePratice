@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <script>
+        let arr = [3,2,6,5,7,1];
+
+        arr.sort((a,b)=> a-b) //오름차순
+        arr.sort().reverse()
+        arr.sort((a,b)=> b-a) //내림차순
+        
+
+        let arr1 = [{
+            'name' : '철수',
+            'age' : 19
+        },
+        {
+            'name' : '영희',
+            'age' : 18
+        },
+        {
+            'name' : '영자',
+            'age' : 24
+        },
+        {
+            'name' : '진수',
+            'age' : 23
+        },
+    ]
+    let arr2 = arr1.sort((a,b)=>a.age - b.age); //나이 오름차순
+    </script>
+</html>
