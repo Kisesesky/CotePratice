@@ -19,6 +19,7 @@ function solution(s){
 
 //풀이
 function solution(s){
+    
     var answer =0;
     let first = s[0];
     let firstCount = 0;
