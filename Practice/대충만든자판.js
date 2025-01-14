@@ -1,28 +1,3 @@
-function solution(keymap, targets) {
-    var answer = [];
-    if (keymap.length === 0) {
-        return targets.map(() => -1);
-    }
-
-    return targets.map(item => {
-        let count = 0;
-        for (const target of item) {
-            let found = false;
-            for (const key of keymap) {
-                let keycount = key.indexOf(target);
-                if (keycount !== -1) {
-                    count += keycount + 1;
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                return -1;
-            }
-        }
-        return count;
-    });
-}
 
 function solution(keymap, targets){
     var answer = [];
