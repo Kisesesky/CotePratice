@@ -15,18 +15,18 @@ function lengthOfLongestSubstring(s: string): number {
 };
 
 function lengthOfLongestSubstring(s: string): number {
-
-    let wordLength = 0
-    for(let i = 0; i<s.length; i++){
-        let currentWord = "" 
-        for(let j = i; j<s.length; j++){
+    let wordLength = 0;
+    for (let i = 0; i < s.length; i++) {
+        let currentWord = "";
+        for (let j = i; j < s.length; j++) {
             let word = s[j];
-            if(currentWord.includes(word))
-                break;
+            if (currentWord.includes(word)) break;
             currentWord += word;
             wordLength = Math.max(wordLength, currentWord.length);
         }
-        return wordLength
-    };
+    }
+    return wordLength;
 }
 //중복수를 구하지 못했다..
+
+const tempArr:string[] = new Array();
