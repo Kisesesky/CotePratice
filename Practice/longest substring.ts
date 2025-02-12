@@ -14,7 +14,7 @@ function lengthOfLongestSubstring(s: string): number {
     return max;
 };
 
-function lengthOfLongestSubstring(s: string): number {
+function lengthOfLongestSubstring2(s: string): number {
     let wordLength = 0;
     for (let i = 0; i < s.length; i++) {
         let currentWord = "";
