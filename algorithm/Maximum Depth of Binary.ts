@@ -12,25 +12,21 @@
  * }
  */
 
- function minDepth(root: TreeNode | null): number {
-    
+ function maxDepth(root: TreeNode | null): number {
+    if(root === null) return 0;
 
-    let queue = [];
-    if(!root) return 0;
-    
-    queue.push([root, 1])
-    let depth = 999999;
+    let queue:[TreeNode, number][] = [[root, 1]]
+    let depth = 0;
+
     while(queue.length){
-        let [node, cnt] = queue.pop();
+        let [node, cur] = queue.pop();
+        depth = Math.max(depth, cur)
         if(node.left){
-            queue.push([node.left, cnt+1])
+            queue.push([node.left, cur +1])
         }
         if(node.right){
-            queue.push([node.right, cnt+1])
-        }
-        if(!node.left && !node.right) { //leaf  단말노드인 경우
-            depth = Math.min(cnt, depth)
+            queue.push([node.right, cur +1])
         }
     }
-    return depth;
-    };
+    return depth
+};
